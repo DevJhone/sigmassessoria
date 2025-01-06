@@ -11,21 +11,28 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             background-color: #f4f4f4;
         }
         .pdf-container {
-            width: 90%;
-            height: 90%;
-            max-width: 1200px;
-            max-height: 800px;
-            border: 1px solid #ccc;
+            width: 100%;
+            height: 0;
+            padding-top: 75%; /* Define a proporção de 4:3 */
+            position: relative;
+        }
+        .pdf-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
         }
     </style>
 </head>
 <body>
     <div class="pdf-container">
-        <embed src="Sigma-Evento.pdf" type="application/pdf" width="100%" height="100%">
+        <iframe src="Sigma-Evento.pdf" type="application/pdf"></iframe>
     </div>
 </body>
 </html>
