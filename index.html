@@ -21,14 +21,18 @@
         }
         .pdf-container {
             width: 100%;
-            height: 100vh; /* Altura total da tela */
+            height: 100%; /* Ajuste de altura para ocupar a tela */
+            display: flex;
+            justify-content: center;
+            align-items: center;
             overflow: hidden; /* Impede rolagem horizontal */
         }
         .pdf-container iframe {
+            max-width: 100%;
+            max-height: 100%; /* Faz o PDF se ajustar à largura da tela */
             width: 100%;
             height: 100%;
             border: none;
-            object-fit: contain; /* Ajusta o conteúdo sem cortar, mantendo a proporção */
         }
     </style>
 </head>
