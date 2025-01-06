@@ -5,24 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nova Lei de Licitações</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         body {
             margin: 0;
             padding: 0;
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
             background-color: #f4f4f4;
         }
         .pdf-container {
             width: 100%;
-            height: 100vh; /* Agora ocupa 100% da altura da tela */
-            position: relative;
+            height: 100vh; /* Altura total da tela */
         }
         .pdf-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
             width: 100%;
             height: 100%;
             border: none;
