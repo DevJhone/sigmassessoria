@@ -1,60 +1,201 @@
+/* Variáveis de cores */
 :root {
     --cor-primaria: #274651;
     --cor-secundaria: #cc2124;
     --cor-terciaria: #ffffff;
 }
 
-body {
-    font-family: 'Montserrat', sans-serif;
+/* Reset básico */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
     color: var(--cor-primaria);
+    background-color: var(--cor-terciaria);
+    line-height: 1.6;
 }
 
 header {
+    background-color: var(--cor-primaria);
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--cor-primaria);
+    width: 90%;
+    max-width: 1200px;
+}
+
+.logo {
     color: var(--cor-terciaria);
-    padding: 1em;
+    font-size: 1.5rem;
+    width: 40px;
 }
 
-header nav ul {
-    display: flex;
-    gap: 1em;
+nav ul {
     list-style: none;
+    display: flex;
+    gap: 20px;
 }
 
-header nav ul li a {
+nav ul li a {
     text-decoration: none;
     color: var(--cor-terciaria);
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
+nav ul li a:hover {
+    color: var(--cor-secundaria);
+}
+
+/* Estilo do Main */
 main {
-    padding: 2em 1em;
+    padding: 20px 0;
 }
 
+#intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    gap: 20px;
+}
+
+#intro .content {
+    max-width: 50%;
+}
+
+#intro .content h2 {
+    color: var(--cor-primaria);
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+#intro .content p {
+    font-size: 1rem;
+    color: #555;
+}
+
+#intro .image img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* Footer */
 footer {
-    text-align: center;
-    padding: 1em;
     background-color: var(--cor-primaria);
     color: var(--cor-terciaria);
+    padding: 20px 0;
 }
 
-/* Estilos para a página inicial */
-#inicio {
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-container h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.footer-container p {
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+footer .material-icons {
+    font-size: 1rem;
+}
+
+footer .copyright {
     text-align: center;
-    padding: 3em 1em;
-    background-color: var(--cor-secundaria);
-    color: var(--cor-terciaria);
+    margin-top: 10px;
+    font-size: 0.8rem;
+    color: #aaa;
 }
 
-#inicio h2 {
-    font-size: 2rem;
-    margin-bottom: 1em;
+/* Slider */
+.slider-container,
+.client-slider {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    overflow: hidden;
+    position: relative;
 }
 
-#inicio p {
-    font-size: 1.2rem
+.slider,
+.client-slider .logos {
+    display: flex;
+    gap: 10px;
+    animation: sliderMove 10s infinite linear;
+}
+
+.slider img,
+.client-slider .logos img {
+    width: 150px;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Animação do Slider */
+@keyframes sliderMove {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Botões e Links */
+button,
+a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+}
+/* Ícones */
+.footer-container .material-icons {
+    font-size: 1.2rem;
+    color: var(--cor-secundaria);
+}
+/* Responsividade */
+@media (max-width: 768px) {
+    #intro {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #intro .content {
+        max-width: 100%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
 }

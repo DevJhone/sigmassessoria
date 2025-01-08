@@ -6,39 +6,59 @@
     <title>Início - Sigma Assessoria</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <script src="scripts.js" defer></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 </head>
 <body>
     <header>
-        <div class="logo">
-            <h1>Sigma Assessoria</h1>
+        <div class="header-container">
+            <div class="logo">
+                <img src="Assets/logo sigma.png" alt="logo">
+               
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="nova-lei.html">Nova Lei de Licitações</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="sobre.html">Sobre</a></li>
-                <li><a href="nova-lei.html">Nova Lei de Licitações</a></li>
-                <li><a href="contato.html">Contato</a></li>
-            </ul>
-        </nav>
     </header>
 
     <main>
-        <section id="inicio">
-            <h2>Especialistas em Contabilidade no Setor Público</h2>
-            <p>
-                A <strong>Sigma Assessoria</strong> oferece serviços especializados de assessoria e consultoria contábil,
-                atendendo exclusivamente o setor público. Trabalhamos com prefeituras e câmaras de vereadores,
-                garantindo conformidade com a legislação, eficiência na gestão fiscal e transparência nas contas públicas.
-            </p>
-            <p>
-                Nosso objetivo é apoiar a gestão pública com soluções modernas e estratégias eficazes,
-                promovendo a organização contábil e fiscal para cumprir com as exigências legais e maximizar os resultados administrativos.
-            </p>
+        <section id="intro">
+            <div class="container">
+                <div class="content">
+                    <h2>Especialistas em Contabilidade no Setor Público</h2>
+                    <p>
+                        Oferecemos soluções personalizadas para prefeituras e câmaras municipais, garantindo eficiência, responsabilidade fiscal e excelência no atendimento às normas vigentes.
+                    </p>
+                </div>
+                <div class="image">
+                    <img src="contabilidade.jpg" alt="Contabilidade no Setor Público">
+                </div>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Sigma Assessoria. Todos os direitos reservados.</p>
+        <div class="footer-container">
+            <div class="location">
+                <h3><span class="material-icons">place</span> Localização</h3>
+                <p>Rua Exemplo, 123 - Centro</p>
+                <p>Bandeira - MG, Brasil</p>
+            </div>
+            <div class="contacts">
+                <h3><span class="material-icons">phone</span> Telefones Úteis</h3>
+                <p><span class="material-icons">call</span> (33) 1234-5678</p>
+                <p><span class="material-icons">smartphone</span> (33) 98765-4321</p>
+                <p><span class="material-icons">email</span> contato@sigmaassessoria.com</p>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2025 Sigma Assessoria. Todos os direitos reservados.</p>
     </footer>
 </body>
 </html>
