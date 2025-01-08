@@ -1,0 +1,60 @@
+:root {
+    --cor-primaria: #274651;
+    --cor-secundaria: #cc2124;
+    --cor-terciaria: #ffffff;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--cor-primaria);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--cor-primaria);
+    color: var(--cor-terciaria);
+    padding: 1em;
+}
+
+header nav ul {
+    display: flex;
+    gap: 1em;
+    list-style: none;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: var(--cor-terciaria);
+}
+
+main {
+    padding: 2em 1em;
+}
+
+footer {
+    text-align: center;
+    padding: 1em;
+    background-color: var(--cor-primaria);
+    color: var(--cor-terciaria);
+}
+
+/* Estilos para a página inicial */
+#inicio {
+    text-align: center;
+    padding: 3em 1em;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-terciaria);
+}
+
+#inicio h2 {
+    font-size: 2rem;
+    margin-bottom: 1em;
+}
+
+#inicio p {
+    font-size: 1.2rem
+}
