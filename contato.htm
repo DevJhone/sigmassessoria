@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre - Sigma Assessoria</title>
+    <title>Contato - Sigma Assessoria</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
     <script src="scripts.js" defer></script>
@@ -20,49 +20,40 @@
                     <li><a href="index.html">Início</a></li>
                     <li><a href="sobre.html">Sobre</a></li>
                     <li><a href="nova-lei.html">Nova Lei de Licitações</a></li>
-                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="contato.html" class="active">Contato</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main>
-        <section id="sobre">
+        <section id="contact">
             <div class="container">
-                <h2>Sobre a Sigma Assessoria</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
-            </div>
-        </section>
+                <h2>Entre em Contato</h2>
+                <p>Preencha o formulário abaixo para nos enviar uma mensagem. Nossa equipe entrará em contato o mais breve possível.</p>
+                <form action="https://formsubmit.co/jhonem678@gmail.com" method="POST">
+                    <!-- Proteção contra spam -->
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="thanks.html">
 
-        <section id="slider-fotos">
-            <div class="slider-container">
-                <h3>Galeria de Imagens</h3>
-                <div class="slider">
-                    <img src="img1.jpg" alt="Imagem 1">
-                    <img src="img2.jpg" alt="Imagem 2">
-                    <img src="img3.jpg" alt="Imagem 3">
-                    <img src="img4.jpg" alt="Imagem 4">
-                    <img src="img5.jpg" alt="Imagem 5">
-                    <img src="img6.jpg" alt="Imagem 6">
-                </div>
-            </div>
-        </section>
-
-        <section id="clientes">
-            <h3>Clientes que Trabalham Conosco</h3>
-            <div class="client-slider">
-                <div class="logos">
-                    <img src="logo1.png" alt="Cliente 1">
-                    <img src="logo2.png" alt="Cliente 2">
-                    <img src="logo3.png" alt="Cliente 3">
-                    <img src="logo4.png" alt="Cliente 4">
-                    <img src="logo5.png" alt="Cliente 5">
-                    <img src="logo6.png" alt="Cliente 6">
-                    <img src="logo7.png" alt="Cliente 7">
-                    <img src="logo8.png" alt="Cliente 8">
-                    <img src="logo9.png" alt="Cliente 9">
-                    <img src="logo10.png" alt="Cliente 10">
-                </div>
+                    <div class="form-group">
+                        <label for="name">Nome Completo</label>
+                        <input type="text" id="name" name="name" placeholder="Digite seu nome" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Assunto</label>
+                        <input type="text" id="subject" name="subject" placeholder="Digite o assunto" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensagem</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Digite sua mensagem" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Enviar</button>
+                </form>
             </div>
         </section>
     </main>
