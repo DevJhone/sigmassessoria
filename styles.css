@@ -21,29 +21,40 @@ body {
 
 header {
     background-color: var(--cor-primaria);
-    padding: 10px 0;
+    padding: 20px 0; /* Aumenta a altura do header */
     display: flex;
     justify-content: center;
     align-items: center;
+    position: fixed; /* Fixa o header no topo */
+    width: 100%; /* Ocupa toda a largura */
+    top: 0;
+    z-index: 1000; /* Prioridade no empilhamento */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
 }
 
 .header-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Espaço entre logo e nav */
     align-items: center;
     width: 90%;
     max-width: 1200px;
 }
 
+.logo {
+    text-align: center; /* Centraliza a logo */
+}
+
 .logo h1 {
     color: var(--cor-terciaria);
-    font-size: 1.5rem;
+    font-size: 1.8rem; /* Tamanho levemente maior */
 }
 
 nav ul {
     list-style: none;
-    display: flex;
-    gap: 20px;
+    display: flex; /* Mantém os itens na horizontal */
+    gap: 20px; /* Espaçamento entre os itens */
+    justify-content: center; /* Alinha itens horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
 }
 
 nav ul li a {
@@ -57,14 +68,6 @@ nav ul li a:hover {
     color: var(--cor-secundaria);
 }
 
-/* Estilo do Main */
-main {
-    padding: px 0;
-}
-
-#intro {
-    position: relative;
-}
 
 .background-image {
     background-image: url('Assets/1411.jpg');
@@ -95,11 +98,11 @@ main {
 
 .background-image h2 {
     color: rgb(255, 255, 255);
-    font-size: 4.5rem;
+    font-size: 3.0rem;
     text-align: center;
     margin: 0;
     font-family: "Anton", serif;
-  font-weight: 600;
+    font-weight: 400;
 }
 
 
@@ -116,7 +119,7 @@ main {
     font-weight: 500;
 }
 
-}
+
 
 #intro .image img {
     max-width: 100%;
@@ -132,7 +135,7 @@ footer {
 
 .footer-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Distribui os itens */
     align-items: center;
     width: 90%;
     max-width: 1200px;
@@ -149,6 +152,7 @@ footer {
     display: flex;
     align-items: center;
     gap: 5px;
+    text-align: center; /* Centraliza o texto */
 }
 
 footer .material-icons {
@@ -162,6 +166,11 @@ footer .copyright {
     color: #dadada;
     background-color: #305664;
     padding: 1%;
+}
+
+
+
+
 
 /* Slider */
 .slider-container,
@@ -232,6 +241,7 @@ footer {
     display: flex;
     align-items: center;
     gap: 0.5em;
+    justify-content: center;
 }
 
 .footer-container p {
@@ -239,6 +249,7 @@ footer {
     display: flex;
     align-items: center;
     gap: 0.5em;
+    justify-content: center;
 }
 
 footer .copyright {
@@ -254,25 +265,43 @@ footer .copyright {
     color: var(--cor-secundaria);
 }
 
-/* Responsividade */
+/* Ajustes para telas menores */
 @media (max-width: 768px) {
-    #intro {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    #intro .content {
-        max-width: 100%;
-    }
-
-    nav ul {
-        flex-direction: column;
+    .header-container {
+        flex-direction: column; /* Empilha logo e navegação */
+        align-items: center; /* Centraliza os itens */
         gap: 10px;
     }
 
+    .logo {
+        margin-bottom: 10px; /* Espaçamento entre logo e nav */
+    }
+
+    nav ul {
+        flex-direction: row; /* Mantém os itens da navegação na horizontal */
+        gap: 15px; /* Espaçamento ajustado para telas menores */
+    }
+    
+    
     .footer-container {
-        flex-direction: column;
-        gap: 20px;
-        text-align: center;
+        flex-direction: column; /* Empilha os elementos */
+        justify-content: center; /* Centraliza verticalmente */
+        align-items: center; /* Centraliza horizontalmente */
+        text-align: center; /* Garante centralização do texto */
+        gap: 20px; /* Espaçamento entre os itens */
+    }
+
+    .location {
+        order: 1; /* Localização primeiro */
+        
+    }
+
+    .contacts {
+        order: 2; /* Contatos abaixo da localização */
+    }
+
+    .material-icons{
+        align-items: center; /* Centraliza horizontalmente */
+        text-align: center; /* Garante centralização do texto */
     }
 }

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Sigma Assessoria</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <script src="scripts.js" defer></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1>Sigma Assessoria</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="nova-lei.html">Nova Lei de Licitações</a></li>
+                    <li><a href="contato.html" class="active">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="contact">
+            <div class="container">
+                <h2>Entre em Contato</h2>
+                <p>Preencha o formulário abaixo para nos enviar uma mensagem. Nossa equipe entrará em contato o mais breve possível.</p>
+                <form action="https://formsubmit.co/jhonem678@gmail.com" method="POST">
+                    <!-- Proteção contra spam -->
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="thanks.html">
+
+                    <div class="form-group">
+                        <label for="name">Nome Completo</label>
+                        <input type="text" id="name" name="name" placeholder="Digite seu nome" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Assunto</label>
+                        <input type="text" id="subject" name="subject" placeholder="Digite o assunto" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensagem</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Digite sua mensagem" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Enviar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="location">
+                <h3><span class="material-icons">place</span> Localização</h3>
+                <p>Rua Exemplo, 123 - Centro</p>
+                <p>Bandeira - MG, Brasil</p>
+            </div>
+            <div class="contacts">
+                <h3><span class="material-icons">phone</span> Telefones Úteis</h3>
+                <p><span class="material-icons">call</span> (33) 1234-5678</p>
+                <p><span class="material-icons">smartphone</span> (33) 98765-4321</p>
+                <p><span class="material-icons">email</span> contato@sigmaassessoria.com</p>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2025 Sigma Assessoria. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
