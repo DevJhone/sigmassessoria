@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Lei de Licitações - Sigma Assessoria</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #f4f4f4;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .pdf-container {
+            flex: 1;
+            width: 100%;
+            height: calc(100vh - 150px); /* Reduzindo a altura da área do PDF */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .pdf-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Barra flutuante com eventos */
+        .floating-bar {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #f9f9f9; /* Fundo cinza claro */
+            box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.15);
+            padding: 10px; /* Reduzindo a altura da barra flutuante */
+            display: flex;
+            justify-content: center;
+            gap: 15px; /* Menor espaçamento entre os blocos */
+        }
+
+        .event {
+            text-align: center;
+            background-color: #f0f0f0; /* Fundo cinza claro dos textos e botões */
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 180px; /* Diminuindo a largura dos blocos */
+        }
+
+        .event h2 {
+            font-size: 16px; /* Fonte menor */
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 6px; /* Reduzindo o espaçamento */
+        }
+
+        .event p {
+            font-size: 12px; /* Fonte menor */
+            color: #666;
+            margin-bottom: 10px; /* Reduzindo o espaçamento */
+        }
+
+        .event button {
+            padding: 6px 15px; /* Botão com padding menor */
+            font-size: 12px; /* Fonte menor */
+            font-weight: 700;
+            color: #fff;
+            background-color: #274651;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .event button:hover {
+            background-color: #3e6879;
+        }
+
+        /* Botão flutuante do WhatsApp com texto */
+        .whatsapp-container {
+            position: fixed;
+            bottom: 110px; /* Ajuste para não sobrepor a barra flutuante */
+            right: 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px; /* Menor espaçamento entre o ícone e o texto */
+            z-index: 999; /* Garante que o botão fique acima de outros elementos */
+        }
+
+        .whatsapp-button {
+            width: 50px; /* Botão menor */
+            height: 50px;
+            background-color: #25d366;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+        }
+
+        .whatsapp-button img {
+            width: 30px; /* Ícone menor */
+            height: 30px;
+        }
+
+        .whatsapp-button:hover {
+            transform: scale(1.1);
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .whatsapp-text {
+            font-size: 14px; /* Texto menor */
+            color: #333;
+            font-family: Arial, sans-serif;
+            background-color: #b8f5c7;
+            padding: 8px 12px;
+            border-radius: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            line-height: 1.4; /* Espaçamento entre as linhas */
+        }
+
+        /* Ajuste para telas menores */
+        @media (max-width: 768px) {
+            .floating-bar {
+                flex-direction: column;
+                align-items: center;
+            }
+            .event {
+                width: 85%; /* Ajusta a largura para telas menores */
+            }
+
+            /* Remover o botão flutuante do WhatsApp em dispositivos móveis */
+            .whatsapp-container {
+                display: none;
+            }
+
+            /* Botão 'Entre em Contato' */
+            .contact-button {
+                background-color: #25d366;
+                padding: 10px 15px;
+                font-size: 14px;
+                color: #fff;
+                border: none;
+                border-radius: 5px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 8px;
+                cursor: pointer;
+                margin-top: 10px;
+            }
+
+            .contact-button img {
+                width: 18px;
+                height: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="Assets/logo sigma.png" alt="logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="nova-lei.html">Nova Lei de Licitações</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="pdf-container">
+        <iframe src="Sigma- Evento.pdf" type="application/pdf">
+            Seu navegador não suporta a visualização de PDFs. 
+            <a href="Sigma- Evento.pdf" target="_blank">Clique aqui para baixar o PDF</a>.
+        </iframe>
+    </div>
+
+    <!-- Barra flutuante com os eventos -->
+    <div class="floating-bar">
+        <!-- Primeiro evento com link direcionado -->
+        <div class="event">
+            <h2>Bate-papo com Gestores</h2>
+            <p>Dia 20 de janeiro de 2025</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSc6h8A9qVoFoNt3JuAT_tJ0QX7Jiaqq_7X-LAYiAx2urcsidw/viewform" target="_blank">
+                <button class="register-now">Inscreva-se</button>
+            </a>
+        </div>
+
+        <!-- Segundo evento com link direcionado -->
+        <div class="event">
+            <h2>Curso: Fase de Planejamento da Licitação</h2>
+            <p>Dias 21 e 22 de janeiro de 2025</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSctkg6hIR5D88n4YEp6xdo5lbZKZnQGfml5aqV2ulKEZLm-WA/viewform" target="_blank">
+                <button class="register-now">Inscreva-se</button>
+            </a>
+        </div>
+    </div>
+
+    <!-- Botão "Entre em Contato" com ícone do WhatsApp, visível somente em dispositivos móveis -->
+    <div class="contact-button">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+        Entre em Contato
+    </div>
+</body>
+</html>
