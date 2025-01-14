@@ -41,3 +41,55 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
+
+// Configuração do Mapa
+function initMap() {
+    const location = { lat: -15.9330, lng: -41.9314 }; // Substitua pela sua latitude e longitude
+    const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 15,
+        center: location,
+    });
+    new google.maps.Marker({
+        position: location,
+        map: map,
+        title: "Sigma Assessoria",
+    });
+}
+
+// Inicialização do Google Maps
+window.onload = () => {
+    if (typeof google !== "undefined" && google.maps) {
+        initMap();
+    } else {
+        console.error("Google Maps API não carregada. Verifique a chave de API.");
+    }
+};
+  
+
+document.addEventListener("DOMContentLoaded", () => {
+    const valueItems = document.querySelectorAll("#values .value-item");
+    const highlightItems = document.querySelectorAll("#highlights .highlight-item");
+
+    function revealOnScroll() {
+        const triggerBottom = window.innerHeight / 1.2;
+
+        // Animação para os itens de valores
+        valueItems.forEach(item => {
+            const itemTop = item.getBoundingClientRect().top;
+            if (itemTop < triggerBottom) {
+                item.classList.add("visible");
+            }
+        });
+
+        // Animação para os itens de destaques
+        highlightItems.forEach(item => {
+            const itemTop = item.getBoundingClientRect().top;
+            if (itemTop < triggerBottom) {
+                item.classList.add("visible");
+            }
+        });
+    }
+
+    window.addEventListener("scroll", revealOnScroll);
+});

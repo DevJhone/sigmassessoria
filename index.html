@@ -8,19 +8,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
     <script src="scripts.js" defer></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Cabeçalho -->
     <header>
         <div class="header-container">
             <div class="logo">
-                <img src="Assets/logo sigma.png" alt="logo">
+                <img src="Assets/logo sigma.png" alt="Logo Sigma Assessoria">
             </div>
             <nav>
                 <ul>
-                    <li><a href="index.html">Início</a></li>
+                    <li><a href="index.html" class="active">Início</a></li>
                     <li><a href="sobre.html">Sobre</a></li>
                     <li><a href="nova-lei.html">Nova Lei de Licitações</a></li>
                     <li><a href="contato.html">Contato</a></li>
@@ -29,35 +27,91 @@
         </div>
     </header>
 
+    <!-- Corpo Principal -->
     <main>
+
         <section id="intro">
             <div class="background-image">
                 <div class="overlay"></div>
                 <div class="content">
-                    <h2>ESPECIALISTA EM CONTABILIDADE NO SETOR PÚBLICO</h2>
+                    <h1>ESPECIALISTA EM CONTABILIDADE NO SETOR PÚBLICO</h1>
                 </div>
             </div>
-            <div class="text">
-                <p>
-                    Oferecemos soluções personalizadas para prefeituras e câmaras municipais, garantindo eficiência, responsabilidade fiscal e excelência no atendimento às normas vigentes.
-                </p>
+        </section>
+
+        <!-- Seção Hero (Introdução com Imagem de Fundo) -->
+        <section id="hero">
+            <div class="hero-content">
+                <h2>Bem-vindo à Sigma Assessoria</h2>
+                <p>Transformamos a gestão contábil de prefeituras e câmaras municipais com excelência, eficiência e inovação.</p>
+
             </div>
         </section>
-    </main>
-    
 
+        <!-- Seção Valores da Empresa -->
+        <section id="values">
+            <h2>Sigma Assessoria tem:</h2>
+            <div class="values-grid">
+                <div class="value-item">
+                    <span class="material-icons">verified</span>
+                    <h3>Transparência</h3>
+                    <p>Atuamos com clareza e comprometimento em todas as nossas ações.</p>
+                </div>
+                <div class="value-item">
+                    <span class="material-icons">group</span>
+                    <h3>Parceria</h3>
+                    <p>Trabalhamos lado a lado com nossos clientes, entendendo suas necessidades.</p>
+                </div>
+                <div class="value-item">
+                    <span class="material-icons">trending_up</span>
+                    <h3>Excelência</h3>
+                    <p>Buscamos sempre os melhores resultados para nossos clientes.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Destaques Visuais -->
+        <section id="highlights">
+            <h2>Por Que Escolher a Sigma?</h2>
+            <div class="highlights-grid">
+                <div class="highlight-item">
+                    <img src="Assets/6895861.jpg" alt="Eficiência">
+                    <h3>Eficiência Garantida</h3>
+                    <p>Processos otimizados para resultados concretos e rápidos.</p>
+                </div>
+                <div class="highlight-item">
+                    <img src="Assets/19197071.jpg" alt="Expertise">
+                    <h3>Equipe Especializada</h3>
+                    <p>Profissionais com experiência comprovada no setor público.</p>
+                </div>
+                <div class="highlight-item">
+                    <img src="Assets/5138237.jpg" alt="Suporte">
+                    <h3>Suporte Dedicado</h3>
+                    <p>Estamos sempre disponíveis para ajudar sua gestão a evoluir.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Call to Action -->
+        <section id="cta">
+            <h2>Pronto para levar sua gestão contábil para o próximo nível?</h2>
+            <a href="contato.html" class="btn">Entre em Contato</a>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
     <footer>
         <div class="footer-container">
             <div class="location">
                 <h3><span class="material-icons">place</span> Localização</h3>
-                <p>R. Barão do Rio Branco, 261 - Centro</p>
-                <p>Almenara - MG, Brasil</p>
+                <p>Rua Exemplo, 123 - Centro</p>
+                <p>Bandeira - MG, Brasil</p>
             </div>
             <div class="contacts">
                 <h3><span class="material-icons">phone</span> Telefones Úteis</h3>
                 <p><span class="material-icons">call</span> (33) 3721-4478</p>
-                <p><span class="material-icons">smartphone</span> (33) 9 8851-7415</p>
-                <p><span class="material-icons">email</span> sigma@sigmassessoria.com</p>
+                <p><span class="material-icons">smartphone</span> (33) 98851-74151</p>
+                <p><span class="material-icons">email</span> sigma@sigmassessoria.com.br</p>
             </div>
         </div>
         <p class="copyright">&copy; 2025 Sigma Assessoria. Todos os direitos reservados.</p>
