@@ -69,6 +69,7 @@ nav ul {
     gap: 20px; /* Espaçamento entre os itens */
     justify-content: center; /* Alinha itens horizontalmente */
     align-items: center; /* Centraliza verticalmente */
+    text-align: center;
 }
 
 nav ul li a {
@@ -304,6 +305,7 @@ footer {
 }
 
 .footer-container h3 {
+    text-decoration: none;
     font-size: 1.2rem;
     margin-bottom: 10px;
 }
@@ -345,21 +347,24 @@ footer {
 }
 
 .footer-container {
+    text-decoration: none;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     max-width: 1200px;
     margin: 0 auto;
     gap: 2em;
-    text-decoration: none;
+    
 }
 
 .footer-container .location,
 .footer-container .contacts {
     flex: 1;
+    text-decoration: none;
 }
 
 .footer-container h3 {
+    text-decoration: none;
     font-size: 1.3rem;
     margin-bottom: 0.5em;
     color: var(--cor-secundaria);
@@ -370,6 +375,7 @@ footer {
 }
 
 .footer-container p {
+    text-decoration: none;
     margin: 0.3em 0;
     display: flex;
     align-items: center;
@@ -436,6 +442,7 @@ iframe {
     display: flex;
     align-items: center;
     gap: 10px;
+    text-align: center;
     text-decoration: none;
     font-size: 1.2rem;
     padding: 10px 20px;
@@ -455,6 +462,24 @@ iframe {
 .social-links a:hover {
     opacity: 0.8;
 }
+
+.social-links .email {
+    background-color: #ff9800; /* Escolha uma cor para o botão de e-mail */
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.social-links .email:hover {
+    background-color: #e68900; /* Cor ao passar o mouse */
+}
+
 
 /* Seção Hero */
 #hero {
@@ -631,7 +656,7 @@ background: linear-gradient(90deg, rgba(39,70,81,1) 0%, rgba(53,95,110,1) 49%, r
     .header-container {
         flex-direction: column; /* Empilha logo e navegação */
         align-items: center; /* Centraliza os itens */
-        gap: 10px;
+        
     }
 
     .logo {
@@ -640,7 +665,7 @@ background: linear-gradient(90deg, rgba(39,70,81,1) 0%, rgba(53,95,110,1) 49%, r
 
     nav ul {
         flex-direction: row; /* Mantém os itens da navegação na horizontal */
-        gap: 15px; /* Espaçamento ajustado para telas menores */
+        gap: 10px; /* Espaçamento ajustado para telas menores */
         
     }
     
@@ -688,5 +713,10 @@ background: linear-gradient(90deg, rgba(39,70,81,1) 0%, rgba(53,95,110,1) 49%, r
 .social-links {
     flex-direction: column;
     gap: 15px;
+    align-items: center;
 }
+
+main{
+    padding-top: 50px; /* Altere o valor para a altura do seu header */
+  }
 }
