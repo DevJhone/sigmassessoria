@@ -788,6 +788,10 @@ iframe {
     }
 }
 
+.ligth{
+    font-weight: 170;
+}
+
 /* Animação aplicada aos itens da seção "Valores da Empresa" */
 #values .value-item {
     animation: fadeInUp 0.8s ease-in-out;
@@ -831,6 +835,7 @@ iframe {
 #highlights .highlight-item.visible {
     opacity: 1; /* Torna visível após a animação */
 }
+
 
 
 /* Ajustes para telas menores */
