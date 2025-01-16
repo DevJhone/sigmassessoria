@@ -483,11 +483,17 @@ footer {
     margin: auto;
 }
 
+.contacts p span {
+    text-decoration: none;
+    pointer-events: none; /* Evita o clique */
+}
+
 .footer-container h3 {
     color: var(--cor-terciaria);
     text-decoration: none;
     font-size: 1.2rem;
     margin-bottom: 10px;
+    
 }
 
 .footer-container p {
