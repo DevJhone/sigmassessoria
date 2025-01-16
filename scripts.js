@@ -93,3 +93,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     window.addEventListener("scroll", revealOnScroll);
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const highlightLink = document.querySelector(".highlight");
+
+    if (highlightLink) {
+        // Adiciona e remove a classe "highlight-active" em intervalos
+        setInterval(() => {
+            highlightLink.classList.toggle("highlight-active");
+        }, 2000); // Intervalo de 2 segundos
+    }
+});
+
