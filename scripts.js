@@ -111,6 +111,19 @@ document.addEventListener("DOMContentLoaded", () => {
     const dotsContainer = document.querySelector("#banner-carousel .carousel-dots");
     let currentIndex = 0;
 
+    // Ajustar a largura dinamicamente
+    const updateSlideWidth = () => {
+        const containerWidth = document.querySelector("#banner-carousel").offsetWidth;
+        slidesContainer.style.width = `${containerWidth * slides.length}px`;
+        slides.forEach((slide) => {
+            slide.style.width = `${containerWidth}px`;
+        });
+    };
+
+    // Atualiza o carrossel na mudança de tamanho da janela
+    window.addEventListener("resize", updateSlideWidth);
+    updateSlideWidth();
+
     // Criar pontos de navegação dinamicamente
     slides.forEach((_, index) => {
         const dot = document.createElement("div");
@@ -122,7 +135,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const dots = document.querySelectorAll("#banner-carousel .dot");
 
     function updateCarousel() {
-        slidesContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+        const containerWidth = document.querySelector("#banner-carousel").offsetWidth;
+        slidesContainer.style.transform = `translateX(-${currentIndex * containerWidth}px)`;
         dots.forEach((dot, index) => {
             dot.classList.toggle("active", index === currentIndex);
         });
@@ -133,7 +147,7 @@ document.addEventListener("DOMContentLoaded", () => {
         updateCarousel();
     }
 
-    const interval = setInterval(nextSlide, 8000);
+    const interval = setInterval(nextSlide, 3000);
 
     dots.forEach((dot, index) => {
         dot.addEventListener("click", () => {
@@ -143,5 +157,4 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
-
 

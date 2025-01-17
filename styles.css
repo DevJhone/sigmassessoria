@@ -217,7 +217,7 @@ a.highlight:hover::after {
 #banner-carousel {
     position: relative;
     overflow: hidden;
-    width: 100%;
+    width: 100%; /* Garante que o carrossel ocupe 100% da largura da tela */
     height: 400px; /* Altura padrão para desktop */
 }
 
@@ -230,13 +230,13 @@ a.highlight:hover::after {
 .carousel-slides {
     display: flex;
     transition: transform 0.5s ease-in-out;
-    width: 500%; /* Para 5 slides */
+    width: calc(100% * 5); /* 5 slides no carrossel */
 }
 
 .carousel-slides img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: 100%; /* Cada imagem ocupa 100% da largura do slide */
+    height: 100%; /* Ajusta a altura proporcionalmente */
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorção */
 }
 
 /* Pontos de navegação */
@@ -263,6 +263,12 @@ a.highlight:hover::after {
 }
 
 /* Responsividade */
+@media (max-width: 1024px) {
+    #banner-carousel {
+        height: 300px; /* Altura para tablets */
+    }
+}
+
 @media (max-width: 768px) {
     #banner-carousel {
         height: 250px; /* Altura reduzida para dispositivos móveis */
