@@ -213,13 +213,12 @@ a.highlight:hover::after {
     
 }
 
-/* Estilo para o carrossel de banners */
+/* Carrossel de banners */
 #banner-carousel {
     position: relative;
     overflow: hidden;
-    max-width: 100%;
-    height: 400px;
-    margin: 0 auto;
+    width: 100%;
+    height: 400px; /* Altura padrão para desktop */
 }
 
 .carousel-container {
@@ -240,6 +239,7 @@ a.highlight:hover::after {
     object-fit: cover;
 }
 
+/* Pontos de navegação */
 .carousel-dots {
     position: absolute;
     bottom: 15px;
@@ -260,6 +260,29 @@ a.highlight:hover::after {
 
 .carousel-dots .dot.active {
     background-color: rgba(255, 255, 255, 1);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    #banner-carousel {
+        height: 250px; /* Altura reduzida para dispositivos móveis */
+    }
+
+    .carousel-dots .dot {
+        width: 8px; /* Pontos menores */
+        height: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    #banner-carousel {
+        height: 200px; /* Altura menor para telas muito pequenas */
+    }
+
+    .carousel-dots .dot {
+        width: 6px; /* Pontos ainda menores */
+        height: 6px;
+    }
 }
 
 
