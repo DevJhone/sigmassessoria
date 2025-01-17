@@ -267,12 +267,16 @@ a.highlight:hover::after {
     #banner-carousel {
         height: 300px; /* Altura para tablets */
     }
-}
+    
+    }
+
 
 @media (max-width: 768px) {
     #banner-carousel {
-        height: 250px; /* Altura reduzida para dispositivos móveis */
+        width: 400px; /* Altura reduzida para dispositivos móveis */
     }
+    .background-image h1{
+        font-size: 2.4rem;}
 
     .carousel-dots .dot {
         width: 8px; /* Pontos menores */
@@ -323,89 +327,6 @@ a.highlight:hover::after {
 }
 .service-details > div {
     scroll-margin-top: 90px; /* Ajusta a margem superior para compensar o header fixo */
-}
-
-.news-container {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.news-title {
-    font-size: 3rem;
-    color: var(--cor-primaria);
-    margin-bottom: 30px;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
- 
-    
-}
-
-.news-card {
-    background: rgba(0, 0, 0, 0.5);
-    border: 2px solid rgba(148, 145, 145, 0.2);
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(5px);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.news-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
-}
-
-.news-heading {
-    font-size: 2rem;
-    color: #ffffff;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-.news-text {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    margin-bottom: 30px;
-    color: #dcdcdc;
-}
-
-.btn-news {
-    display: inline-block;
-    padding: 15px 30px;
-    background: linear-gradient(45deg, #cc2124, #ff5733);
-    color: #ffffff;
-    font-size: 1.2rem;
-    font-weight: bold;
-    border-radius: 50px;
-    border: none;
-    cursor: pointer;
-    transition: background 0.3s ease, transform 0.3s ease;
-    box-shadow: 0 5px 20px rgba(204, 33, 36, 0.5);
-}
-
-.btn-news:hover {
-    background: linear-gradient(45deg, #ff5733, #cc2124);
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(255, 87, 51, 0.6);
-}
-
-
-/* Efeito de brilho no botão */
-.glow-effect {
-    box-shadow: 0 0 15px rgba(204, 33, 36, 0.8), 0 0 30px rgba(204, 33, 36, 0.6);
-}
-/* Efeito pulsante no botão */
-.pulse {
-    animation: pulseEffect 1s infinite;
-}
-
-@keyframes pulseEffect {
-    0%, 100% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1);
-    }
 }
 
 
