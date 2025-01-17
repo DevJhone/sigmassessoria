@@ -92,25 +92,16 @@ nav ul li a:hover {
 
 
 .background-image {
-    background-image: url('Assets/1411.jpg');
+    background-image: url('Assets/Sigma\ Assessoria\ -\ Background\ claro.jpg');
     background-size: cover;
     background-position: center;
-    height: 400px; /* Altura aumentada */
+    height: 300px; /* Altura aumentada */
     position: relative;
     display: flex;
     justify-content: center; /* Alinhamento horizontal */
     align-items: center;    /* Alinhamento vertical */
 }
 
-.background-image .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)); /* Degradê */
-    z-index: 1;
-}
 
 .background-image .content {
     position: relative;
@@ -119,7 +110,7 @@ nav ul li a:hover {
 }
 
 .background-image h1 {
-    color: rgb(255, 255, 255);
+    color:(--cor-primaria);
     font-size: 3.0rem;
     text-align: center;
     margin: 0;
@@ -220,6 +211,160 @@ a.highlight:hover::after {
     
 }
 
+/* Seção de Notícias */
+#news {
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #2a2f36, #3c4e63);
+    color: #ffffff;
+    text-align: center;
+    margin: 40px auto;
+    max-width: 1200px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+#news::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background-color:#f1f1f1;
+    animation: moveGradient 10s infinite linear;
+    z-index: -1;
+}
+
+@keyframes moveGradient {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(-25%, -25%);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+.service-details > div {
+    padding-top: 80px; /* Ajuste conforme a altura do cabeçalho */
+    margin-top: -80px; /* Compensa o deslocamento causado pelo padding */
+}
+.services-list a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+    padding: 10px 15px;
+    background: rgba(39, 70, 81, 0.8);
+    border-radius: 8px;
+    transition: background 0.3s;
+}
+
+.services-list a:hover {
+    background: rgba(53, 95, 110, 1);
+    color: white;
+}
+
+.service-details div {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.service-details > div {
+    scroll-margin-top: 90px; /* Compensa o cabeçalho fixo */
+}
+.service-details > div {
+    scroll-margin-top: 90px; /* Ajusta a margem superior para compensar o header fixo */
+}
+
+.news-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.news-title {
+    font-size: 3rem;
+    color: var(--cor-primaria);
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+ 
+    
+}
+
+.news-card {
+    background: rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(148, 145, 145, 0.2);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+.news-heading {
+    font-size: 2rem;
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.news-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    color: #dcdcdc;
+}
+
+.btn-news {
+    display: inline-block;
+    padding: 15px 30px;
+    background: linear-gradient(45deg, #cc2124, #ff5733);
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 5px 20px rgba(204, 33, 36, 0.5);
+}
+
+.btn-news:hover {
+    background: linear-gradient(45deg, #ff5733, #cc2124);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(255, 87, 51, 0.6);
+}
+
+
+/* Efeito de brilho no botão */
+.glow-effect {
+    box-shadow: 0 0 15px rgba(204, 33, 36, 0.8), 0 0 30px rgba(204, 33, 36, 0.6);
+}
+/* Efeito pulsante no botão */
+.pulse {
+    animation: pulseEffect 1s infinite;
+}
+
+@keyframes pulseEffect {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
 
 /* Seção Principal de Serviços */
 #services {
@@ -302,7 +447,7 @@ a.highlight:hover::after {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(120deg, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.2));
+   
     opacity: 0;
     transition: opacity 0.4s ease;
     z-index: 0;
@@ -362,39 +507,7 @@ a.highlight:hover::after {
     color: #e6e6e6;
 }
 
-/* Animação Suave */
-.services-list li {
-    animation: fadeInUp 0.6s ease forwards;
-    opacity: 0;
-    transform: translateY(20px);
-}
 
-.services-list li:nth-child(1) {
-    animation-delay: 0.2s;
-}
-
-.services-list li:nth-child(2) {
-    animation-delay: 0.4s;
-}
-
-.services-list li:nth-child(3) {
-    animation-delay: 0.6s;
-}
-
-.services-list li:nth-child(4) {
-    animation-delay: 0.8s;
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 
 /* Slider de Clientes */
 

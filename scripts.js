@@ -106,7 +106,51 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+document.addEventListener("DOMContentLoaded", () => {
+    const newsButton = document.getElementById("news-button");
 
+    // Clique no botão para redirecionar
+    newsButton.addEventListener("click", () => {
+        window.location.href = "nova-lei.html";
+    });
 
+    // Efeito de brilho no botão
+    setInterval(() => {
+        newsButton.classList.toggle("glow-effect");
+    }, 1500);
+});
 
+document.addEventListener("DOMContentLoaded", () => {
+    const newsButton = document.getElementById("news-learn-more");
 
+    // Clique no botão para redirecionar
+    newsButton.addEventListener("click", () => {
+        window.location.href = "nova-lei.html";
+    });
+
+    // Efeito pulsante no botão
+    setInterval(() => {
+        newsButton.classList.toggle("pulse");
+    }, 1000);
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    // Seleciona todos os links na lista de serviços
+    const serviceLinks = document.querySelectorAll(".services-list a");
+
+    // Adiciona o evento de clique em cada link
+    serviceLinks.forEach(link => {
+        link.addEventListener("click", (event) => {
+            event.preventDefault(); // Evita o comportamento padrão do link
+            const targetId = link.getAttribute("href"); // Obtém o ID do destino
+            const targetElement = document.querySelector(targetId); // Seleciona o elemento de destino
+
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: "smooth", // Habilita a rolagem suave
+                    block: "start"
+                });
+            }
+        });
+    });
+});
