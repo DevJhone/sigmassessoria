@@ -263,17 +263,11 @@ a.highlight:hover::after {
 }
 
 /* Responsividade */
-@media (max-width: 1024px) {
-    #banner-carousel {
-        height: 300px; /* Altura para tablets */
-    }
-    
-    }
-
 
 @media (max-width: 768px) {
     #banner-carousel {
         width: 400px; /* Altura reduzida para dispositivos móveis */
+        height: 100px;
     }
     .background-image h1{
         font-size: 2.4rem;}
@@ -285,9 +279,7 @@ a.highlight:hover::after {
 }
 
 @media (max-width: 480px) {
-    #banner-carousel {
-        height: 200px; /* Altura menor para telas muito pequenas */
-    }
+    
 
     .carousel-dots .dot {
         width: 6px; /* Pontos ainda menores */
