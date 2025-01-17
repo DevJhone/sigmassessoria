@@ -105,52 +105,43 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-
 document.addEventListener("DOMContentLoaded", () => {
-    const newsButton = document.getElementById("news-button");
+    const slides = document.querySelectorAll("#banner-carousel .carousel-slides img");
+    const slidesContainer = document.querySelector("#banner-carousel .carousel-slides");
+    const dotsContainer = document.querySelector("#banner-carousel .carousel-dots");
+    let currentIndex = 0;
 
-    // Clique no botão para redirecionar
-    newsButton.addEventListener("click", () => {
-        window.location.href = "nova-lei.html";
+    // Criar pontos de navegação dinamicamente
+    slides.forEach((_, index) => {
+        const dot = document.createElement("div");
+        dot.classList.add("dot");
+        if (index === 0) dot.classList.add("active");
+        dotsContainer.appendChild(dot);
     });
 
-    // Efeito de brilho no botão
-    setInterval(() => {
-        newsButton.classList.toggle("glow-effect");
-    }, 1500);
-});
+    const dots = document.querySelectorAll("#banner-carousel .dot");
 
-document.addEventListener("DOMContentLoaded", () => {
-    const newsButton = document.getElementById("news-learn-more");
+    function updateCarousel() {
+        slidesContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+        dots.forEach((dot, index) => {
+            dot.classList.toggle("active", index === currentIndex);
+        });
+    }
 
-    // Clique no botão para redirecionar
-    newsButton.addEventListener("click", () => {
-        window.location.href = "nova-lei.html";
-    });
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % slides.length;
+        updateCarousel();
+    }
 
-    // Efeito pulsante no botão
-    setInterval(() => {
-        newsButton.classList.toggle("pulse");
-    }, 1000);
-});
+    const interval = setInterval(nextSlide, 8000);
 
-document.addEventListener("DOMContentLoaded", () => {
-    // Seleciona todos os links na lista de serviços
-    const serviceLinks = document.querySelectorAll(".services-list a");
-
-    // Adiciona o evento de clique em cada link
-    serviceLinks.forEach(link => {
-        link.addEventListener("click", (event) => {
-            event.preventDefault(); // Evita o comportamento padrão do link
-            const targetId = link.getAttribute("href"); // Obtém o ID do destino
-            const targetElement = document.querySelector(targetId); // Seleciona o elemento de destino
-
-            if (targetElement) {
-                targetElement.scrollIntoView({
-                    behavior: "smooth", // Habilita a rolagem suave
-                    block: "start"
-                });
-            }
+    dots.forEach((dot, index) => {
+        dot.addEventListener("click", () => {
+            currentIndex = index;
+            updateCarousel();
+            clearInterval(interval);
         });
     });
 });
+
+

@@ -1,6 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Style+Script&display=swap');
 
 
 /* Variáveis de cores */
@@ -95,7 +95,7 @@ nav ul li a:hover {
     background-image: url('Assets/Sigma\ Assessoria\ -\ Background\ claro.jpg');
     background-size: cover;
     background-position: center;
-    height: 300px; /* Altura aumentada */
+    height: 100px; /* Altura aumentada */
     position: relative;
     display: flex;
     justify-content: center; /* Alinhamento horizontal */
@@ -113,9 +113,11 @@ nav ul li a:hover {
     color:(--cor-primaria);
     font-size: 3.0rem;
     text-align: center;
+    padding-top: 15px;
     margin: 0;
-    font-family: "Anton", serif;
-    font-weight: 400;
+    font-family: "Style Script", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 
@@ -211,44 +213,56 @@ a.highlight:hover::after {
     
 }
 
-/* Seção de Notícias */
-#news {
-    padding: 60px 20px;
-    background: linear-gradient(135deg, #2a2f36, #3c4e63);
-    color: #ffffff;
-    text-align: center;
-    margin: 40px auto;
-    max-width: 1200px;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    overflow: hidden;
+/* Estilo para o carrossel de banners */
+#banner-carousel {
     position: relative;
-    z-index: 1;
+    overflow: hidden;
+    max-width: 100%;
+    height: 400px;
+    margin: 0 auto;
 }
 
-#news::before {
-    content: '';
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 500%; /* Para 5 slides */
+}
+
+.carousel-slides img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-dots {
     position: absolute;
-    top: 0;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background-color:#f1f1f1;
-    animation: moveGradient 10s infinite linear;
-    z-index: -1;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
 }
 
-@keyframes moveGradient {
-    0% {
-        transform: translate(0, 0);
-    }
-    50% {
-        transform: translate(-25%, -25%);
-    }
-    100% {
-        transform: translate(0, 0);
-    }
+.carousel-dots .dot {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
+
+.carousel-dots .dot.active {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+
 .service-details > div {
     padding-top: 80px; /* Ajuste conforme a altura do cabeçalho */
     margin-top: -80px; /* Compensa o deslocamento causado pelo padding */
